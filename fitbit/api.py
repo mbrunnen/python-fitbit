@@ -876,6 +876,16 @@ class Fitbit(object):
         """
         return self._get_body('weight', base_date, user_id, period, end_date)
 
+    def delete_bodyweight(self, log_id, user_id=None):
+        """
+        https://dev.fitbit.com/reference/web-api/body/#delete-weight-log
+        """
+        url = "{0}/{1}/user/{2}/body/log/weight/{log_id}.json".format(
+                *self._get_common_args(user_id),
+                log_id=log_id
+                )
+        return self.make_request(url, method='DELETE')
+
     def get_bodyfat(self, base_date=None, user_id=None, period=None, end_date=None):
         """
         https://dev.fitbit.com/docs/body/#get-body-fat-logs
