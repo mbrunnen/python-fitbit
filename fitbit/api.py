@@ -869,7 +869,7 @@ class Fitbit(object):
         """
         https://dev.fitbit.com/docs/body/#get-weight-logs
         base_date should be a datetime.date object (defaults to today),
-        period can be '1d', '7d', '30d', '1w', '1m', '3m', '6m', '1y', 'max' or None
+        period can be '1d', '7d', '30d', '1w', '1m' or None
         end_date should be a datetime.date object, or None.
 
         You can specify period or end_date, or neither, but not both.
